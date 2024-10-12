@@ -25,6 +25,12 @@ pipeline  {
       }
     }
 
+     stage('Build Tests') {
+      steps {
+        sh "dotnet test"
+      }
+    }
+
     stage('Generate Report') {
       steps {
         allure includeProperties:
