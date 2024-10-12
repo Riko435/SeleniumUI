@@ -10,18 +10,21 @@ pipeline  {
 
     stage('Nuget Restore') {
       steps {
+        echo "Restore Nuget package"
         sh "dotnet restore"
       }
     }
 
     stage('Build Tests') {
       steps {
+          echo "Build solution"
         sh "dotnet build"
       }
     }
 
      stage('Run Tests') {
       steps {
+        echo "Run UI Tests"
         sh "dotnet test"
       }
     }
