@@ -26,13 +26,10 @@ pipeline  {
         echo "Run UI Tests"
         bat 'dotnet test TestProject1.sln'
       }
-
-     post {
-                always {
-                    allure includeProperties: false, jdk: '', results: [[path: 'target/allure-results']]
-                }
-      }
     }
+
+    stage('Generate Allure Report') { steps { script { ws('/C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\UITests_master\\TestProject1\\bin\\Debug\\net8.0/') { allure([ includeProperties: false, jdk: '', properties: [], reportBuildPolicy: 'ALWAYS', results: [[path: 'allure-results']] ]) } } } }
+
   }
 }
   
