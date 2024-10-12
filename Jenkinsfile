@@ -29,7 +29,7 @@ pipeline  {
 
        post  {
      always {
-          allure includeProperties: false, jdk: '', results: [[path: '"C:\\Users\\Riko\\source\\repos\\TestProject1\\TestProject1\\bin\\Debug\\net8.0\\allure-results"']]
+          allure includeProperties: false, jdk: '', results: [[path: 'TestProject1\\bin\\Debug\\net8.0\\allure-results"']]
         }
       }
     }
