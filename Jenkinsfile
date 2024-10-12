@@ -8,11 +8,6 @@ pipeline  {
       }
     }
 
-    stage('Checkout') {
-      steps {
-            }
-    }
-
     stage('Nuget Restore') {
       steps {
         sh "dotnet restore"
