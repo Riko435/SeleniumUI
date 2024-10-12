@@ -8,6 +8,13 @@ pipeline  {
       }
     }
 
+  stages {
+    stage('Checkout') {
+      steps {
+          git 'https://github.com/Riko435/SeleniumUI.git'
+      }
+    }
+
     stage('Nuget Restore') {
       steps {
         echo "Restore Nuget package"
