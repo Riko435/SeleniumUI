@@ -28,12 +28,11 @@ pipeline  {
       }
     }
 
-    post {
+    post  {
      always {
           allure includeProperties: false, jdk: '', results: [[path: 'Debug//net8.0//allure-results']]
        }
     }
-   
   }
 }
   
