@@ -27,15 +27,13 @@ pipeline  {
         bat 'dotnet test TestProject1.sln'
       }
 
-      post {
-        allure(
-          [
-            allure includeProperties:
+     post {
+                always {
+                    allure includeProperties:
                      false,
                      jdk: '',
-                     reportBuildPolicy: 'ALWAYS',
-                     results: [[path: 'target/allure-results']]
-          ])
+                     results: [[path: 'build/allure-results']]
+                }
       }
     }
   }
