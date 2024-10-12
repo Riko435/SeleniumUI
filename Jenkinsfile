@@ -11,21 +11,21 @@ pipeline  {
     stage('Nuget Restore') {
       steps {
         echo "Restore Nuget package"
-        sh "dotnet restore"
+        sh "dotnet restore TestProject1"
       }
     }
 
     stage('Build Tests') {
       steps {
           echo "Build solution"
-        sh "dotnet build"
+        sh "dotnet build TestProject1"
       }
     }
 
      stage('Run Tests') {
       steps {
         echo "Run UI Tests"
-        sh "dotnet test"
+        sh "dotnet test TestProject1"
       }
     }
 
