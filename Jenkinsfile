@@ -27,10 +27,15 @@ pipeline  {
         bat 'dotnet test TestProject1.sln'
       }
 
-       post  {
-     always {
-          allure includeProperties: false, jdk: '', results: [[path: 'bin/Debug/net8.0/allure-results"']]
-        }
+      post {
+        allure(
+          [
+            allure includeProperties:
+                     false,
+                     jdk: '',
+                     reportBuildPolicy: 'ALWAYS',
+                     results: [[path: 'target/allure-results']]
+          ])
       }
     }
   }
