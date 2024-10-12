@@ -33,7 +33,7 @@ pipeline  {
         allure includeProperties:
                    false,
                      jdk: '',
-                     results: [[path: 'build/allure-results']]
+                     results: [[path: 'build\TestProject1\bin\Debug\net8.0\Allure-results']] 
       }
     }
   }
