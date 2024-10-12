@@ -1,5 +1,5 @@
 pipeline  {
-  ageny any
+  agent any
 
   stages {
     stage('CleanWorkspace') {
@@ -25,7 +25,7 @@ pipeline  {
       }
     }
 
-     stage('Build Tests') {
+     stage('Run Tests') {
       steps {
         sh "dotnet test"
       }
