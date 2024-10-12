@@ -8,7 +8,6 @@ pipeline  {
       }
     }
 
-  stages {
     stage('Checkout') {
       steps {
           git 'https://github.com/Riko435/SeleniumUI.git'
@@ -42,7 +41,6 @@ pipeline  {
                    false,
                      jdk: '',
                      results: [[path: 'build/allure-results']]
-      }
       }
     }
   }
