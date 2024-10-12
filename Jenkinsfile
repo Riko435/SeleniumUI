@@ -29,7 +29,7 @@ pipeline  {
 
      post {
                 always {
-                    allure includeProperties: false, jdk: '', results: [[path: 'build/allure-results']]
+                    allure includeProperties: false, jdk: '', results: [[path: 'target\allure-results']]
                 }
       }
     }
