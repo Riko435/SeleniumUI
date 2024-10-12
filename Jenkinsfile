@@ -27,7 +27,7 @@ pipeline  {
         bat 'dotnet test TestProject1.sln'
       }
     }
-stage('Generate Allure Report') { steps { script { ws('/C:/ProgramData/Jenkins/.jenkins/workspace/UITests_master/TestProject1/bin/Debug/net8.0/') { allure([ includeProperties: false, jdk: '', properties: [], reportBuildPolicy: 'ALWAYS', results: [[path: 'allure-results']] ]) } } } }
+stage('Generate Allure Report') { steps { script { ws('C:\ProgramData\Jenkins\.jenkins\workspace\UITests_master\TestProject1\bin\Debug\net8.0\allure-results') { allure([ includeProperties: false, jdk: '', properties: [], reportBuildPolicy: 'ALWAYS', results: [[path: 'allure-results']] ]) } } } }
 
   }
 }
