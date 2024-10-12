@@ -30,7 +30,7 @@ pipeline  {
 
     stage('Generate Report') {
       steps {
-       allure includeProperties: false, jdk: '', results: [[path: 'TestProject1//bin//Debug//net8.0//allure-results']]
+       allure includeProperties: false, jdk: '', results: [[path: 'Debug//net8.0//allure-results']]
       }
     }
   }
