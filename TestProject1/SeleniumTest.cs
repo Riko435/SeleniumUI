@@ -35,13 +35,8 @@ namespace SeleniumCsharp
 
             //You can also specify chromedriver.exe path dircly ex: C:/MyProject/Project/drivers
 
-            string path = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
-
-            //Creates the ChomeDriver object, Executes tests on Google Chrome
-
-            driver = new ChromeDriver(path + @"\drivers\");
-
-            //If you want to Execute Tests on Firefox uncomment the below code
+            driver = new ChromeDriver();
+                 //If you want to Execute Tests on Firefox uncomment the below code
 
             // Specify Correct location of geckodriver.exe folder path. Ex: C:/Project/drivers
 
