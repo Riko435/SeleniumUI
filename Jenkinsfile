@@ -17,21 +17,14 @@ pipeline  {
     stage('Nuget Restore') {
       steps {
         echo "Restore Nuget package"
-        sh "dotnet restore TestProject1"
-      }
-    }
-
-    stage('Build Tests') {
-      steps {
-          echo "Build solution"
-        sh "dotnet build TestProject1"
+        bat 'dotnet restore TestProject1.sln'
       }
     }
 
      stage('Run Tests') {
       steps {
         echo "Run UI Tests"
-        sh "dotnet test TestProject1"
+        bat 'dotnet test TestProject1.sln'
       }
     }
 
